@@ -69,7 +69,7 @@ public class Menu {
             System.out.println("3. 이전 메뉴로 가기");
             System.out.print("메뉴 선택:");
             x = sc.nextInt();
-
+            System.out.println("");
             switch (x){
                 case 1 :
                     System.out.println("**프로그램 시작**");
@@ -101,7 +101,7 @@ public class Menu {
             System.out.println("2. 이전 메뉴로 가기");
             System.out.print("메뉴 선택:");
             x = sc.nextInt();
-
+            System.out.println("");
             switch (x){
                 case 1 :
                     System.out.println("**프로그램 시작**");
@@ -136,7 +136,7 @@ public class Menu {
             System.out.println("9. 이전 메뉴로 가기");
             System.out.print("메뉴 선택:");
             x = sc.nextInt();
-
+            System.out.println("");
             switch (x){
                 case 1 :
                     System.out.println("**프로그램 시작**");
@@ -193,7 +193,7 @@ public class Menu {
             System.out.println("3. 이전 메뉴로 가기");
             System.out.print("메뉴 선택:");
             x = sc.nextInt();
-
+            System.out.println("");
             switch (x){
                 case 1 :
                     System.out.println("**프로그램 시작**");
@@ -232,7 +232,7 @@ public class Menu {
             System.out.println("9. 이전 메뉴로 가기");
             System.out.print("메뉴 선택:");
             x = sc.nextInt();
-
+            System.out.println("");
             switch (x){
                 case 1 :
                     System.out.println("**프로그램 시작**");
@@ -292,7 +292,7 @@ public class Menu {
             System.out.println("6. 이전 메뉴로 가기");
             System.out.print("메뉴 선택:");
             x = sc.nextInt();
-
+            System.out.println("");
             switch (x){
                 case 1 :
                     System.out.println("**프로그램 시작**");
@@ -338,7 +338,7 @@ public class Menu {
             System.out.println("4. 이전 메뉴로 가기");
             System.out.print("메뉴 선택:");
             x = sc.nextInt();
-
+            System.out.println("");
             switch (x){
                 case 1 :
                     System.out.println("**프로그램 시작**");
@@ -375,7 +375,7 @@ public class Menu {
             System.out.println("3. 이전 메뉴로 가기");
             System.out.print("메뉴 선택:");
             x = sc.nextInt();
-
+            System.out.println("");
             switch (x){
                 case 1 :
                     System.out.println("**프로그램 시작**");
@@ -408,7 +408,7 @@ public class Menu {
             System.out.println("3. 이전 메뉴로 가기");
             System.out.print("메뉴 선택:");
             x = sc.nextInt();
-
+            System.out.println("");
             switch (x){
                 case 1 :
                     System.out.println("**프로그램 시작**");
@@ -442,7 +442,7 @@ public class Menu {
             System.out.println("4. 이전 메뉴로 가기");
             System.out.print("메뉴 선택:");
             x = sc.nextInt();
-
+            System.out.println("");
             switch (x){
                 case 1 :
                     System.out.println("**프로그램 시작**");
@@ -467,12 +467,36 @@ public class Menu {
     }
 
     public void subNonStaticMethodMenu(){
-
+        NonStaticMethodSample nsms = new NonStaticMethodSample();
+        Scanner sc = new Scanner(System.in);
+        int x;
+        do{
+            System.out.println("");
+            System.out.println("*** non-static 메소드 사용 테스트 부메뉴 ***");
+            System.out.println("");
+            System.out.println("1. Scanner 클래스 사용 : 자료형 종류별로 값 입력받아 출력하기");
+            System.out.println("2. Random 클래스 사용 : 정수와 실수에 대한 난수 출력하기");
+            System.out.println("3. 이전 메뉴로 가기");
+            System.out.print("메뉴 선택:");
+            x = sc.nextInt();
+            System.out.println("");
+            switch (x){
+                case 1 :
+                    System.out.println("**프로그램 시작**");
+                    nsms.testScanner();
+                    break;
+                case 2 :
+                    System.out.println("**프로그램 시작**");
+                    nsms.testRandom();
+                    break;
+                case 3 :
+                    System.out.println("메인 메뉴로 돌아갑니다.");
+                    return;
+                default:
+                    System.out.println("잘못된 번호입니다. 다시 입력해주세요.");
+                    break;
+            }
+        }while(x!=3);
     }
 
-
-    public static void main(String[] args){
-        Menu m = new Menu();
-        m.mainMenu();
-    }
 }
